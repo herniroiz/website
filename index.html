@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roiz - Coming Soon</title>
+    <title>Roiz - iOS Development</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
     <style>
         body, html {
@@ -58,7 +58,7 @@
         footer {
             position: relative;
             z-index: 1;
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: rgba(0, 0, 0, 0.1);
             padding: 2rem;
             display: flex;
             justify-content: space-around;
@@ -72,28 +72,30 @@
             text-decoration: none;
             margin-right: 1rem;
         }
-        .contact-form {
+        .services {
             display: flex;
-            flex-direction: column;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
         }
-        .contact-form input,
-        .contact-form textarea {
-            margin-bottom: 1rem;
-            padding: 0.5rem;
-            border: none;
-            border-radius: 4px;
+        .service {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 8px;
+            backdrop-filter: blur(5px);
         }
-        .contact-form button {
-            padding: 0.5rem 1rem;
-            background-color: #ffffff;
-            color: #000000;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
+        .service h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
         }
-        .contact-form button:hover {
-            background-color: #f0f0f0;
+        .service p {
+            font-size: 1rem;
+            letter-spacing: 1px;
+        }
+        .footer-section p {
+            margin: 0.5rem 0;
+            font-size: 0.9rem;
         }
     </style>
 </head>
@@ -101,22 +103,29 @@
     <div class="container">
         <div class="content">
             <h1>Roiz</h1>
-            <p>Coming Soon</p>
+            <p>iOS Development Expert</p>
+            <div class="services">
+                <div class="service">
+                    <h3>Swift</h3>
+                    <p>Native iOS app development</p>
+                </div>
+                <div class="service">
+                    <h3>Flutter</h3>
+                    <p>Cross-platform app development</p>
+                </div>
+            </div>
         </div>
         <footer>
             <div class="footer-section social-links">
                 <h3>Connect with me</h3>
-                <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
-                <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/hernan-roiz" target="_blank">LinkedIn</a>
+                <a href="https://github.com/herniroiz" target="_blank">GitHub</a>
             </div>
             <div class="footer-section">
-                <h3>Contact Me</h3>
-                <form class="contact-form" action="#" method="POST">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="message" placeholder="Your Message" required></textarea>
-                    <button type="submit">Send</button>
-                </form>
+                <h3>iOS Development Services</h3>
+                <p>Custom app development</p>
+                <p>UI/UX design</p>
+                <p>App Store submission</p>
             </div>
         </footer>
     </div>
