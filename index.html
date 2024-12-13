@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roiz - Coming Soon</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
     <style>
         body, html {
             height: 100%;
@@ -13,16 +13,14 @@
         }
         .container {
             position: relative;
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            justify-content: space-between;
             background-image: url('https://images.unsplash.com/photo-1476231682828-37e571bc172f?q=80&w=3174&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
             background-size: cover;
             background-position: center;
             color: white;
-            text-align: center;
         }
         .container::before {
             content: '';
@@ -36,6 +34,12 @@
         .content {
             position: relative;
             z-index: 1;
+            text-align: center;
+            padding: 2rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
         h1 {
             font-family: 'Playfair Display', serif;
@@ -51,6 +55,46 @@
             letter-spacing: 2px;
             font-weight: 300;
         }
+        footer {
+            position: relative;
+            z-index: 1;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 2rem;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .footer-section {
+            margin: 1rem;
+        }
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            margin-right: 1rem;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            border: none;
+            border-radius: 4px;
+        }
+        .contact-form button {
+            padding: 0.5rem 1rem;
+            background-color: #ffffff;
+            color: #000000;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .contact-form button:hover {
+            background-color: #f0f0f0;
+        }
     </style>
 </head>
 <body>
@@ -59,6 +103,22 @@
             <h1>Roiz</h1>
             <p>Coming Soon</p>
         </div>
+        <footer>
+            <div class="footer-section social-links">
+                <h3>Connect with me</h3>
+                <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+                <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Me</h3>
+                <form class="contact-form" action="#" method="POST">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </footer>
     </div>
 </body>
 </html>
